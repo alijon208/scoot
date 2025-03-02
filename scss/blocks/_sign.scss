@@ -1,0 +1,91 @@
+.sign {
+    background-color: $dark-gray;
+    overflow-x: hidden;
+}
+
+.sign__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 55px 0;
+    position: relative;
+    &::before{
+        position: absolute;
+        background-image: url('/img/sign-before.png');
+        width: 1090px;
+        height: 150px;
+        content: '';
+        background-repeat: no-repeat;
+        right: -250px;
+        bottom: 0;
+    }
+}
+
+.sign__wrapper {
+    display: flex;
+}
+
+
+.sign__text {
+    width: 415px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -2.142857074737549px;
+    color: white;
+}
+
+.sign__link {
+    padding: 9px 19px;
+    padding-left: 50px;
+    border-radius: 5px;
+    background-color: rgba(229, 236, 244, 1);
+    margin-right: 20px;
+    position: relative;
+    color: $dark-gray;
+    &::after{
+        background-image: url('../../img/apple-icon.svg');
+        position: absolute;
+        width: 24px;
+        height: 28px;
+        content: '';
+        left: 14px;
+        top: 14px;
+    }
+    &:nth-child(2){
+        margin-right: 0;
+        &::after{
+            background-image: url('../../img/playmarket-icon.svg');
+        }
+    }
+}
+
+.sign__link-smalltext {
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 14.81px;
+    letter-spacing: -0.4464285671710968px;
+    margin: 0;
+}
+
+.sign__link-bigtext {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.8928571343421936px;
+    margin: 0;
+}
+
+@media only screen and (max-width:800px){
+    .sign__container{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:800px){
+    .sign__text{
+        font-size: 32px;
+        line-height: 32px;
+    }
+}

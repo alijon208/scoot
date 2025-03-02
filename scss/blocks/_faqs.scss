@@ -1,0 +1,140 @@
+.faqs__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.faqs__content {
+    background-color: rgba(242, 245, 249, 1);
+    width: 630px;
+    padding: 0 50px;
+    margin-bottom: 20px;
+    position: relative;
+    &:hover{
+        background-color: rgba(255, 244, 223, 1);
+    }
+}
+
+.faqs__opener {
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    &::after {
+        position: absolute;
+        right: 60px;
+        top: 35px;
+        width: 16px;
+        height: 8px;
+        background: url(../../img/strelka.svg) no-repeat center center;
+        content: '';
+    }
+}
+
+.faqs__closer {
+    &::after{
+        transform: rotateX(180deg);
+    }
+}
+
+.faqs__content-text {
+    display: none;
+}
+
+.text--block{
+    display: block;
+    padding-bottom: 20px;
+}
+
+.faqs__content-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1.07px;
+    color: $dark-gray;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.faqs__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2.14px;
+    color: $dark-gray;
+    margin-bottom: 100px;
+}
+
+.faqs__content-text {
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 0px;
+    color: $gray;
+}
+
+.faqs__item-title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -1.79px;
+    color: $dark-gray;
+    margin: 0;
+}
+
+@media only screen and (max-width:1020px){
+    .faqs__content{
+        width: 500px;
+    }
+    .faqs__opener{
+        &::after{
+            right: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width:900px){
+    .faqs__content{
+        width: 630px;
+    }
+    .faqs__item-title{
+        margin-bottom: 30px;
+    }
+    .faqs__item{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width:750px){
+    .faqs__content{
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .faqs__content{
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .faqs__content{
+        width: 300px;
+    }
+    .faqs__item-title{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .faqs__opener{
+        &::after{
+            right: 15px;
+        }
+    }
+}
+
+@media only screen and (max-width:400px){
+    .faqs__content{
+        width: 250px;
+    }
+}

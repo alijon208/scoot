@@ -1,0 +1,51 @@
+.about-intro{
+    background-image: url('../../img/about-intro-bg.jpg');
+    background-size: cover;
+    background-color: rgba(23, 45, 105, 0.66);
+    background-blend-mode: darken;
+    position: relative;
+    padding: 60px 0;
+    margin-bottom: 200px;
+    background-size: cover;
+    &::after{
+        position: absolute;
+        width: 205px;
+        height: 63px;
+        right: 0;
+        top: 95px;
+        content: '';
+        background: url('../../img/about-after.png') no-repeat center center;
+        z-index: 1;
+    }
+}
+
+
+@media only screen and (max-width:1150px){
+    .about-intro__title{
+        margin-left: 50px;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .about-intro{
+        &::after{
+            display: none;
+        }
+        .about-intro__title{
+            text-align: center;
+            margin-left: 0;
+            font-style: 40px;
+        }
+    }
+}
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+        .about-intro{
+            background-image: url('../../img/about-intro-bg2x.jpg');
+        }
+    }

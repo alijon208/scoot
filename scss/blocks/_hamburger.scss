@@ -1,0 +1,37 @@
+@keyframes hamburger-opener {
+    0% {
+        left: -100vh;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+.hamburger {
+    display: none;
+    width: 20px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    background-image: url('../../img/hamburger-open.svg');
+    background-color: transparent;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+.hamburger--open {
+    background-image: url('../../img/hamburger-open.svg');
+}
+
+.hamburger--close {
+    background-image: url('../../img/hamburger-close.svg');
+}
+
+@media only screen and (max-width:700px){
+    .hamburger {
+        display: block;
+        position: absolute;
+    }
+}

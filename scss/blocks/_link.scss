@@ -1,0 +1,11 @@
+.link{
+    padding: 15px 36px;
+    background-color: $orange;
+    border: 2px solid $orange;
+    color: white;
+    transition: 500ms;
+    &:hover{
+        color: $orange;
+        background-color: transparent;
+    }
+}
